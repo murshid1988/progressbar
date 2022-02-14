@@ -1,0 +1,95 @@
+progress {
+  border-radius: 100px;
+  width: 60%;
+  height: 20px;
+  margin-bottom: 30px;
+  position: relative;
+}
+progress:after {
+  content: attr(value) "%";
+  position: absolute;
+  top: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  right: 10px;
+  font-size: 12px;
+}
+
+progress::-webkit-progress-bar {
+  border-radius: 20px;
+  background-color: #e1e1e1;
+}
+progress::-webkit-progress-value {
+  background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      #ccc 10px,
+      #ccc 20px
+    ),
+    linear-gradient(to bottom, #eee, #999);
+  border-radius: 20px;
+}
+progress::-moz-progress-bar {
+  /* style rules */
+}
+
+progress.green::-webkit-progress-value {
+  border: 1px solid #95b763;
+  background-blend-mode: overlay;
+  background-image: linear-gradient(to top, #000, #fff),
+    linear-gradient(to bottom, #98cc4f, #98cc4f),
+    repeating-linear-gradient(
+      135deg,
+      transparent,
+      transparent 5px,
+      rgba(133, 196, 64, 1) 5px,
+      rgba(133, 196, 64, 1) 10px
+    );
+}
+
+progress.red::-webkit-progress-value {
+  border: 1px solid #a63f37;
+  background-blend-mode: overlay;
+  background-image: linear-gradient(to top, #000, #fff),
+    linear-gradient(to bottom, #f07261, #f07261),
+    repeating-linear-gradient(
+      135deg,
+      transparent,
+      transparent 5px,
+      #f05f51 5px,
+      #f05f51 10px
+    );
+}
+
+progress.white::-webkit-progress-value {
+  border: 1px solid #c5c5c5;
+  background: #fefefe;
+}
+
+progress.blue::-webkit-progress-value {
+  border: 1px solid #4889b4;
+  background-blend-mode: overlay;
+  background-image: linear-gradient(to top, #000, #fff),
+    linear-gradient(to bottom, #78b8e2, #78b8e2),
+    repeating-linear-gradient(
+      135deg,
+      transparent,
+      transparent 5px,
+      #5faedf 5px,
+      #5faedf 10px
+    );
+}
+
+progress.yellow::-webkit-progress-value {
+  border: 1px solid #b28b37;
+  background-blend-mode: overlay;
+  background-image: linear-gradient(to top, #000, #fff),
+    linear-gradient(to bottom, #f2c456, #f2c456),
+    repeating-linear-gradient(
+      135deg,
+      transparent,
+      transparent 5px,
+      #f2b63c 5px,
+      #f2b63c 10px
+    );
+}
